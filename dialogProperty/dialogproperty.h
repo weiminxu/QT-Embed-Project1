@@ -2,6 +2,8 @@
 #define DIALOGPROPERTY_H
 
 #include <QMainWindow>
+#include <QMessageBox>
+
 
 namespace Ui {
 class dialogProperty;
@@ -15,8 +17,12 @@ public:
     explicit dialogProperty(QWidget *parent = nullptr);
     ~dialogProperty();
 
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::dialogProperty *ui;
+    QMessageBox *qmb;
 };
 
 #endif // DIALOGPROPERTY_H
